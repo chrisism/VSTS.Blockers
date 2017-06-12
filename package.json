@@ -1,0 +1,19 @@
+{
+  "devDependencies": {
+    "del": "2.2.2",
+    "gulp": "3.9.1",
+    "gulp-replace": "0.5.4",
+    "gulp-sequence": "0.4.6",
+    "gulp-shell": "0.6.3",
+    "gulp-typescript": "^3.1.7",
+    "tfx-cli": "^0.3.49",
+    "typescript": "^2.1.4"
+  },
+  "dependencies": {
+    "@types/jquery": "^2.0.34",
+    "@types/q": "0.0.32",
+    "vss-web-extension-sdk": "^2.109.0"
+  },
+  "name": "vsts-blockers",
+  "version": "1.0.0"
+}

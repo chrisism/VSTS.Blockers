@@ -1,0 +1,93 @@
+{
+	"manifestVersion": 1,
+	"id": "jungit-blockers",
+	"name": "Blockers",
+	"description": "Extension to better visualize impediments during sprints",
+	"version": "__VERSION__",
+	"publisher": "jungeriusit",
+	"public":  true, 
+	"baseUri": "https://github.com/chrisism/",
+  	"scopes": [ "vso.work", "vso.work_write" ],
+	"tags": [
+		"impediments",
+		"blockers",
+		"blocked"
+	],
+	"links": {
+		"home": {
+			"uri": "https://github.com/chrisism/VSTS.Blockers"
+		},
+		"learn": {
+			"uri": "https://github.com/chrisism/VSTS.Blockers"
+		},
+		"support": {
+			"uri": "https://github.com/chrisism/VSTS.Blockers/issues"
+		},
+		"repository": {
+			"uri": "https://github.com/chrisism/VSTS.Blockers"
+		}
+	},
+	"repository": {
+		"type": "git",
+		"uri": "https://github.com/chrisism/VSTS.Blockers"
+	},
+	"screenshots": [
+		{
+			"path": "screenshot.jpg"
+		}
+	],
+	"branding": {
+		"color": "rgb(157, 140, 255)",
+		"theme": "light"
+	},
+	"targets": [
+		{
+			"id": "Microsoft.VisualStudio.Services"
+		}
+	],
+	"icons": {
+		"default": "logo.png"
+	},
+	"content": {
+		"details": {
+			"path": "README.md"
+		},
+		"license": {
+			"path": "license.md"
+		}
+	},
+  	"files": [
+    {
+      "path": "scripts",
+      "addressable": true
+    },
+    {
+      "path": "static",
+      "addressable": true
+    },
+		{
+		"path": "node_modules/vss-web-extension-sdk/lib",
+		"addressable": true,
+		"packagePath": "lib"
+		}
+  ],
+  "categories": [
+    "Integrate"
+  ],
+  "contributions": [
+	{
+		"id": "blockers-context-action",
+		"type": "ms.vss-web.action",
+		"description": "Create new impediment",
+		"targets": [
+			"ms.vss-work-web.work-item-context-menu"
+		],
+		"properties": {
+			"text": "Item is blocked",
+			"title": "Blocked",
+			"groupId": "vcInWit",
+			"icon": "static/img/blocked-icon.png",
+			"uri": "static/item-blocked-action.html"
+		}
+	}]
+}
