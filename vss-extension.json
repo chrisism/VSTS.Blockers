@@ -5,7 +5,7 @@
 	"description": "Extension to better visualize impediments during sprints",
 	"version": "__VERSION__",
 	"publisher": "jungeriusit",
-	"public": false, 
+	"public": true, 
 	"scopes": [ "vso.work", "vso.work_write" ],
 	"tags": [
 		"impediments",
