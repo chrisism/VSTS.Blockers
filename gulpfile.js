@@ -58,6 +58,11 @@ gulp.task('createPackage', shell.task([
     'tfx extension create --manifest-globs vss-extension.json'
 ], {cwd: "./_build/"}));
 
+gulp.task('publishPackage', shell.task([
+    'tfx extension publish --rev-version'
+], {cwd: "./_build/"}));
+
 gulp.task('build', gulpSequence('clean', ['getVersion', 'copyPackageFiles', 'copyStaticSourceFiles'], 'copyTokenizedFiles', 'compile'));
-gulp.task('buildpackage', gulpSequence('build', 'createPackage'));
+gulp.task('package', gulpSequence('build', 'createPackage'));
+gulp.task('publish', gulpSequence('package', 'publishPackage'));
 gulp.task('default', ['build']);

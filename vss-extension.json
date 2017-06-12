@@ -5,9 +5,8 @@
 	"description": "Extension to better visualize impediments during sprints",
 	"version": "__VERSION__",
 	"publisher": "jungeriusit",
-	"public":  true, 
-	"baseUri": "https://github.com/chrisism/",
-  	"scopes": [ "vso.work", "vso.work_write" ],
+	"public": false, 
+	"scopes": [ "vso.work", "vso.work_write" ],
 	"tags": [
 		"impediments",
 		"blockers",
@@ -31,11 +30,6 @@
 		"type": "git",
 		"uri": "https://github.com/chrisism/VSTS.Blockers"
 	},
-	"screenshots": [
-		{
-			"path": "screenshot.jpg"
-		}
-	],
 	"branding": {
 		"color": "rgb(157, 140, 255)",
 		"theme": "light"
@@ -66,7 +60,7 @@
       "addressable": true
     },
 		{
-		"path": "node_modules/vss-web-extension-sdk/lib",
+		"path": "../node_modules/vss-web-extension-sdk/lib",
 		"addressable": true,
 		"packagePath": "lib"
 		}
